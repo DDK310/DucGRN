@@ -1,0 +1,21 @@
+device: cuda  # 使用设备 (cuda 或 cpu)
+
+model:
+  type: VGAE
+  hidden_dim1: 128
+  hidden_dim2: 64
+  hidden_dim3: 64
+  num_heads: 8
+  dropout: 0.2
+  alpha: 0.2
+  vae_bool: true
+
+training:
+  epochs: 200
+  optimizer: adam
+  lr: 0.001
+  lr_decay: 0.0001
+  weight_decay: 0.0001
+  gamma: 0.1
+  momentum: 0.9
+  sample_type: hHSC
